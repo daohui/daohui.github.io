@@ -6,7 +6,7 @@ copyright_name:
 description: "Write your site description here. It will be used as your sites meta description as well!"
 baseurl: ""
 url: "http://daohui.github.io"
-github_username:  daohui-li
+github_username:  daohui
 email_username:  daohui2004@gmail.com
 
 # Google Analytics
