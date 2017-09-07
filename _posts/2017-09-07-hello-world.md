@@ -4,7 +4,8 @@ title:      "Hello, World"
 subtitle:   "My first try on Github Pages using <strong>jekyll</strong>"
 date:       2017-09-07
 author:     "Daohui Li"
-header-img: ""
+header-img: "img/hello-world.jpg"
+head_image_only: true
 ---
 
 ## Ready
