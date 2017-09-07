@@ -401,3 +401,8 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+nav ul li a[href].active,
+nav ul li a[href].active:hover {
+  /*font-weight:bold;*/
+  color:darkgray;
+}
