@@ -23,3 +23,7 @@ Installing <i>ruby</i> and <i>jekyll</i> on my laptop, based on [jekyll installa
 - customize _config.yml_, _head.html_ _nav.html_, _footer.html_
 - worked on _about.html_
 - explorer using other technologies _Github Pages_. Tried on [using Angular on my resume page]({{site.url}}/resume)
+
+## Further...
+
+- use _yaml_ files in _\_data_ directory to automate and simplify the code (based on instructions [in this page](https://jekyllrb.com/docs/datafiles/)).

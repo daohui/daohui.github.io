@@ -15,19 +15,9 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <!-- <li>
-                    <a href="{{ site.baseurl }}/">Home</a>
-                </li> -->
-                <!-- {% for page in site.pages %}{% if page.title %}
-				{% if page.url != '/404.html' %}
-                <li>
-                    <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                </li>
-				{% endif %}
-                {% endif %}{% endfor %} -->
-                <li><a href="/videos/" {% if page.url contains "/video/" %}class="active" {% endif %}>Videos</a></li>
-                <li><a href="/resume/" {% if page.url contains "/resume/" %}class="active" {% endif %}>Resume</a></li>
-                <li><a href="/about/" {% if page.url contains "/about/" %}class="active" {% endif %}>About</a></li>        
+                {% for aPage in site.data.nav %}
+                    <li><a href="{{aPage.url}}" {% if page.url contains {{aPage.url}} %} class="active" {% endif %}>{{ aPage.name }}</a></li>
+                {% endfor %}    
             </ul>
         </div>
         <!-- /.navbar-collapse -->
