@@ -24,6 +24,7 @@ Installing <i>ruby</i> and <i>jekyll</i> on my laptop, based on [jekyll installa
 - worked on _about.html_
 - explorer using other technologies _Github Pages_. Tried on [using Angular on my resume page]({{site.url}}/resume)
 
-## Further...
+## Further and Deeper...
 
 - use _yaml_ files in _\_data_ directory to automate and simplify the code (based on instructions [in this page](https://jekyllrb.com/docs/datafiles/)).
+- there are *so many* features beyond the basic syntax. I am using separate blog(s?) for the advanced features I encountered (see [this post]({{ site.baseurl }}{% post_url 2017-09-10-extended-jekyll-study %}))
