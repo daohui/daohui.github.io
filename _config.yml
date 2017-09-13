@@ -1,9 +1,9 @@
 # Site settings
-title: Clean Blog
+title: Daohui Li
 header-img: img/home-bg.jpg
 email: daohui2004@gmail.com
 copyright_name: 
-description: "Write your site description here. It will be used as your sites meta description as well!"
+description: "Blog site!"
 baseurl: ""
 url: "http://daohui.github.io"
 github_username:  daohui
