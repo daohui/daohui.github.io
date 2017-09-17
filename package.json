@@ -1,9 +1,9 @@
 {
-    "name": "clean-blog",
-    "title": "Clean Blog",
+    "name": "Daohui Li",
+    "title": "Daohui Li",
     "version": "1.0.0",
-    "homepage": "http://startbootstrap.com",
-    "author": "Start Bootstrap",
+    "homepage": "https://daohui.github.io",
+    "author": "Daohui Li",
     "license": "MIT",
     "devDependencies": {
         "grunt": "~0.4.5",

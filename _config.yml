@@ -13,6 +13,8 @@ email_username:  daohui2004@gmail.com
 # To enable google analytics, uncomment below line with a valid Google Tracking ID
 # google_tracking_id:
 
+source: src
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
