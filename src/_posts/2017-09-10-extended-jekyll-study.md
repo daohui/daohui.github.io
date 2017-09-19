@@ -5,41 +5,51 @@ subtitle:   "advanced features and extension"
 date:       2017-09-10
 author:     "Daohui Li"
 header-img: "img/study.jpg"
+uses: google-charts math 
 ---
 
+<h1 style="text-decoration:underline;">Table of Content</h1>
 * TOC
 {: toc}
+<hr/>
 
 The basic setup of a jekyll project can be seen in [my first post]({{ site.baseurl }}{% post_url 2017-09-07-hello-world %}). 
 
-# Jekyll's how-to
+# Re-arrange file structure
 
-* How to adding links to other posts:
+*Motivation*: 
+1. Cleanup the top-level directory to make its not cluttered, 
+2. in preparation of integrating with other technologies
+
+*Steps*:
+1. create _src_ directory and move all the source code, except _config.yml_, _.gitignore_, _Gemfile_, _package.json_, to _src_
+2. add the following entry in _config.yml_:
+~~~ text
+  source: src
+~~~
+
+# Jekyll Studies
+
+Jekyll employs following technologies to generate static html pages:
+ - [Front Matter](https://jekyllrb.com/docs/frontmatter/): it uses _\_config.yml_ (and other _yaml_ files in _\_data_ directory) and block between *triple-dashed-lines*, `---`, to defines variables and to specify the file structure (e.g., _layout_).
+ - [Liquid](https://shopify.github.io/liquid/) is employed to process templates:
+   i. include segment of html files (mainly from _\_include_ directory, but can use _include-relative_ to include files from other location)
+   ii. fill in variables, via '{{' and '}}'
+   iii. provides conditional logic, _if, elseif, else, and endif_, and _case, when, else, endcase_.
+   iv. provides loop logic, _for and endfor_.
+   v. filters, such as _append, prepend, replace_ etc.
+- [kramdown](https://kramdown.gettalong.org/syntax.html) is used to process markdown files (as seen in the markdown attribute in _config.yml).
+
+# How-to
+
+* *Adding links to other posts*:
 {% raw %}
 ~~~ text
 {{ site.baseurl }}{% post_url 2010-07-21-name-of-post %}
 ~~~
 {% endraw %}
 
-* How to include a file 
-
-{% raw %}
-~~~ text
-{% include_relative directory/filename %}
-
-For example,
-{% include_relative assets/hello.txt %} 
-~~~
-{% endraw %}
-
-{% include_relative assets/hello.txt %} 
-
-# [kramdown syntax and features](https://kramdown.gettalong.org/syntax.html)
-
-Jekyll uses *kramdown* to process markdown files (as seen in the markdown attribute in _config.yml). It is therefore beneficial to know the features of kramdown. The following are features I used:
-
-* Enable math block in kramdown
----------------
+* *Enable math block in kramdown*
 
 *kramdown* uses '$$' to mark the math boundary. For example: 
 <pre>$$ a^2 + b^2 = c^2 $$</pre> leads to $$ a^2 + b^2 = c^2 $$.
@@ -51,29 +61,11 @@ Jekyll uses *kramdown* to process markdown files (as seen in the markdown attrib
 </script>
 ~~~
 
-# Re-arrange file structure
 
-*Motivation*: 
-1. Cleanup the top-level directory so that it is not cluttered, 
-2. in preparation of integrating with other technologies
+# Add [Google Charts](https://developers.google.com/chart/)
 
-*Steps*:
-1. create _src_ directory and move all the source code, except _config.yml_, _.gitignore_, _Gemfile_, _package.json_, to _src_
-2. add the following entry in _config.yml_:
-~~~ text
-  source: src
-~~~
+1. Include google API and our own javascript, _draw\_charts.js_, in a html file.
+2. _draw\_charts.js_ is used to manipulate a DOM element, based on _id_ in our case, and draws a pie chart
+3. defines the DOM element in a html file, for example, down below:
 
-# Add Google Charts
-
-1. Include google API and our own javascript, to be introduced next, in a html file
-~~~ html
-
-~~~
-
-<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>      
-      <script type="text/javascript" src="/assets/javascripts/draw-charts.js" charset="utf-8">
-</script>   
-<script type="text/javascript" async
-  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
-</script>
+<div id="google-charts--pie"></div>

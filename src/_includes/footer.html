@@ -75,3 +75,13 @@
 
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
+
+{% if page.uses | contains: 'math' %}
+    <script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+{% endif %}
+{% if page.uses | contains: 'google-charts' %}
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>      
+    <script type="text/javascript" src="/assets/javascripts/draw-charts.js" charset="utf-8"></script>   
+{% endif %}
+
